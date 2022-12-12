@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: hsl(210, 36%, 96%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section{
+  transition: 0.3s linear all;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  width: auto;
+  background-color: #fff;
+  padding: 0.8rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  
+}
+
+ul{
   display: flex;
-  flex-direction: column;
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 11rem 0;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: all 0.3s smooth;
 }
 
-.App-link {
-  color: #61dafb;
+.img-container img {
+  width: 200px;
+  height: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-primary-5);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+  
+}
+
+.nav-toggle:hover {
+  color: var(--clr-primary-1);
+}
+
+.nav-links{
+  transition: all 0.3s linear;
+
+}
+
+ul {
+  list-style-type: none;
+ 
+}
+
+li {
+  margin: 0 10px;
+  text-transform: capitalize;
+}
+
+li:focus {
+  outline: none;
+}
+
+li:hover {
+  color: hsl(205, 78%, 60%);
+}
+
+.icons {
+  color: hsl(205, 78%, 60%);
+}
+
+.links {
+  font-size: 17px;
+  letter-spacing: 1.5px;
+}
+
+a {
+  text-decoration-line: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.list-items {
+  display: flex;
+}
+
+.nav-toggle {
+  display: none;
+
+}
+
+.nav-toggle:hover{
+  transform-origin: center
+
   }
-  to {
-    transform: rotate(360deg);
+
+
+@media (max-width: 850px) {
+
+  .section{
+    transition: all 0.3s linear;
   }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: 20px 80px;
+    justify-content: space-between;
+    padding: 1px;
+    margin: 2px;
+    transition: all 0.3s linear;
+  }
+
+  ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-items {
+    display: grid;
+    opacity: 80%;
+  }
+  
+  li{
+    margin: 10px 0;
+  }
+  
+  li a{
+    width: 100%;
+    
+  }
+  
+  
+
+
+  .social-icons {
+    display: none;
+  }
+  .img-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 35px;
+    width: auto;
+  }
+
+  .nav-toggle {
+    display: flex;
+    font-size: 1.5rem;
+    color: hsl(205, 78%, 60%);
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+
+
+
 }
